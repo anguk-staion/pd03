@@ -382,21 +382,37 @@ body {
   pointer-events: none;
   z-index: 1;
 }
+/* ─────────── DECO: 잔잔히 호흡하는 코랄빛 원형 그라데이션 ─────────── */
 .deco--circle {
-  top: 40px;
-  right: 36px;
-  width: 140px;
-  height: 140px;
-  border: 1px dashed var(--c-gold);
+  /* === 사용자 조정 영역 (원하는 값으로 바꾸세요) === */
+  --deco-size: 200px;       /* 원 크기 */
+  --deco-top: 30px;         /* 위에서부터 거리 */
+  --deco-right: 30px;       /* 오른쪽에서부터 거리 */
+  --deco-color: 214, 95, 62; /* 코랄색 RGB (R, G, B) — 색 바꾸려면 여기 */
+  /* ============================================ */
+
+  top: var(--deco-top);
+  right: var(--deco-right);
+  width: var(--deco-size);
+  height: var(--deco-size);
   border-radius: 50%;
-  opacity: 0.5;
-  /* 360도 회전 대신 좌우로 살랑살랑 */
-  animation: sway 6s ease-in-out infinite;
+  background: radial-gradient(
+    circle,
+    rgba(var(--deco-color), 0.55),
+    rgba(var(--deco-color), 0.15) 50%,
+    transparent 75%
+  );
+  filter: blur(4px);
+  /* 잔잔한 호흡: 4초 주기, scale 0.85 ↔ 1.05 */
+  animation: breathe 4s ease-in-out infinite;
   transform-origin: center center;
 }
+<<<<<<< HEAD
 .deco--circle::before {
   content: " AI Thanks • Letter • For someone special • ";
 }
+=======
+>>>>>>> 766ab50 (design: 점선 원 제거, 코랄 그라데이션 호흡 효과로 교체)
 .deco--blob {
   bottom: -40px;
   left: -60px;
@@ -550,9 +566,15 @@ body {
   0%   { left: -100%; }
   100% { left: 130%; }
 }
+<<<<<<< HEAD
 @keyframes sway {
   0%, 100% { transform: rotate(35deg); }
   50%      { transform: rotate(65deg); }
+=======
+@keyframes breathe {
+  0%, 100% { transform: scale(0.85); opacity: 0.55; }
+  50%      { transform: scale(1.05); opacity: 0.9; }
+>>>>>>> 766ab50 (design: 점선 원 제거, 코랄 그라데이션 호흡 효과로 교체)
 }
 @keyframes pulse {
   0%   { transform: scale(1);    opacity: 0.7; }
