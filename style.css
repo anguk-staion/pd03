@@ -372,11 +372,11 @@ body {
   z-index: 1;
 }
 .deco--circle {
-  /* 게시물 안쪽으로 위치 조정 (잘리지 않게) */
-  top: 60px;
-  right: 60px;
-  width: 180px;
-  height: 180px;
+  /* 게시물 안쪽으로 충분히 들여서 잘리지 않게 */
+  top: 30px;
+  right: 80px;
+  width: 150px;
+  height: 150px;
   opacity: 1;
   /* 작은 각도로 좌우로 살랑살랑 흔들리는 모션 */
   animation: sway 6s ease-in-out infinite;
@@ -390,9 +390,9 @@ body {
 }
 .deco--circle .circle-text {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.25em;
   fill: var(--c-accent);
   text-transform: uppercase;
 }

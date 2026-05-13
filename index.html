@@ -102,18 +102,18 @@
         <!-- 점선 원 + 원을 따라 흐르는 글자 (SVG textPath) -->
         <div class="deco deco--circle" aria-hidden="true">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- 글자가 따라 흐를 보이지 않는 원형 경로 (반지름 78) -->
+            <!-- 글자가 따라 흐를 원형 경로 (반지름 80, 중심 100,100) -->
             <defs>
               <path id="circlePath"
-                d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
+                d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
             </defs>
-            <!-- 점선 원 (보이는 장식) -->
-            <circle cx="100" cy="100" r="92"
+            <!-- 점선 원 — 글자 경로와 같은 반지름(80) -->
+            <circle cx="100" cy="100" r="80"
               fill="none"
               stroke="var(--c-accent)"
-              stroke-width="1.5"
-              stroke-dasharray="4 5"
-              opacity="0.6" />
+              stroke-width="1.2"
+              stroke-dasharray="3 4"
+              opacity="0.55" />
             <!-- 원을 따라 흐르는 글자 -->
             <text class="circle-text">
               <textPath href="#circlePath" startOffset="0">
