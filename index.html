@@ -40,7 +40,7 @@
         </div>
         <h1 class="post-header__title">
           <span class="title-line title-line--accent">고마운 사람에게 보내는</span>
-          <span class="title-line">영상편지, <em>전해보세요</em></span>
+          <span class="title-line">AI 영상편지, <em>참여해보세요</em></span>
         </h1>
         <p class="post-header__sub">
           AI가 만들어주는 짧은 영상 한 편으로,<br />
@@ -67,8 +67,9 @@
               <p>
                 직접 카메라 앞에 서지 않아도 괜찮습니다.
                 간단한 문장 몇 줄이면 AI가 따뜻한 영상 한 편을 완성해 드립니다.
-                이번 PlayDay에서는 직원 여러분의 진심을 담은 영상편지를 모아
-                서로의 마음을 나누는 자리를 마련했어요. 부담 없이, 가볍게 참여해 주세요.
+                이번 PlayDay에서는 직원 여러분의 진심을 담은 영상편지를 만들어
+                서로의 마음을 나누는 활동을 준비했어요. 부담 없이, 가볍게 참여해 주세요.
+                ※우수작을 선정하여 케이크 교환권을 드립니다.
               </p>
             </div>
           </div>
@@ -99,28 +100,8 @@
         </div>
 
         <!-- 데코레이션 -->
-        <!-- 점선 원 + 원을 따라 흐르는 글자 (SVG textPath) -->
         <div class="deco deco--circle" aria-hidden="true">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- 글자가 따라 흐를 원형 경로 (반지름 80, 중심 100,100) -->
-            <defs>
-              <path id="circlePath"
-                d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
-            </defs>
-            <!-- 점선 원 — 글자 경로와 같은 반지름(80) -->
-            <circle cx="100" cy="100" r="80"
-              fill="none"
-              stroke="var(--c-accent)"
-              stroke-width="1.2"
-              stroke-dasharray="3 4"
-              opacity="0.55" />
-            <!-- 원을 따라 흐르는 글자 -->
-            <text class="circle-text">
-              <textPath href="#circlePath" startOffset="0">
-                · PLAY · DAY · VOL.3 · PLAY · DAY · VOL.3 
-              </textPath>
-            </text>
-          </svg>
+          <span class="deco--circle__text">　　　　　　　　PLAY · DAY · VOL.3</span>
         </div>
         <div class="deco deco--blob" aria-hidden="true"></div>
       </section>

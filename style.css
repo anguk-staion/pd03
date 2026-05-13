@@ -372,29 +372,31 @@ body {
   z-index: 1;
 }
 .deco--circle {
-  /* 게시물 안쪽으로 충분히 들여서 잘리지 않게 */
-  top: 30px;
-  right: 80px;
-  width: 150px;
-  height: 150px;
-  opacity: 1;
+  top: 40px;
+  right: 36px;
+  width: 140px;
+  height: 140px;
+  border: 1px dashed var(--c-accent);
+  border-radius: 50%;
+  opacity: 0.65;
   /* 작은 각도로 좌우로 살랑살랑 흔들리는 모션 */
   animation: sway 6s ease-in-out infinite;
   transform-origin: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.deco--circle svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  overflow: visible;
-}
-.deco--circle .circle-text {
+.deco--circle__text {
   font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  fill: var(--c-accent);
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--c-accent);
   text-transform: uppercase;
+  white-space: nowrap;
+  /* 글자 앞 전각공백(　)으로 위치를 조정 — 살랑살랑할 때 보이는 위치를 잡음 */
 }
 .deco--blob {
   bottom: -40px;
