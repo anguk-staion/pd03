@@ -388,7 +388,7 @@ body {
   --deco-size: 200px;       /* 원 크기 */
   --deco-top: 30px;         /* 위에서부터 거리 */
   --deco-right: 30px;       /* 오른쪽에서부터 거리 */
-  --deco-color: 214, 95, 62; /* 코랄색 RGB (R, G, B) — 색 바꾸려면 여기 */
+  --deco-color: 201, 164, 92; /* 코랄색 RGB (R, G, B) — 색 바꾸려면 여기 */
   /* ============================================ */
 
   top: var(--deco-top);
@@ -407,12 +407,6 @@ body {
   animation: breathe 4s ease-in-out infinite;
   transform-origin: center center;
 }
-<<<<<<< HEAD
-.deco--circle::before {
-  content: " AI Thanks • Letter • For someone special • ";
-}
-=======
->>>>>>> 766ab50 (design: 점선 원 제거, 코랄 그라데이션 호흡 효과로 교체)
 .deco--blob {
   bottom: -40px;
   left: -60px;
@@ -566,15 +560,9 @@ body {
   0%   { left: -100%; }
   100% { left: 130%; }
 }
-<<<<<<< HEAD
-@keyframes sway {
-  0%, 100% { transform: rotate(35deg); }
-  50%      { transform: rotate(65deg); }
-=======
 @keyframes breathe {
   0%, 100% { transform: scale(0.85); opacity: 0.55; }
   50%      { transform: scale(1.05); opacity: 0.9; }
->>>>>>> 766ab50 (design: 점선 원 제거, 코랄 그라데이션 호흡 효과로 교체)
 }
 @keyframes pulse {
   0%   { transform: scale(1);    opacity: 0.7; }
