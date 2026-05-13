@@ -99,7 +99,28 @@
         </div>
 
         <!-- 데코레이션 -->
-        <div class="deco deco--circle" aria-hidden="true"></div>
+        <!-- 점선 원 + 원을 따라 흐르는 글자 (SVG textPath) -->
+        <div class="deco deco--circle" aria-hidden="true">
+          <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- 글자가 따라 흐를 보이지 않는 원형 경로 -->
+            <defs>
+              <path id="circlePath"
+                d="M 90,90 m -68,0 a 68,68 0 1,1 136,0 a 68,68 0 1,1 -136,0" />
+            </defs>
+            <!-- 점선 원 (보이는 장식) -->
+            <circle cx="90" cy="90" r="78"
+              fill="none"
+              stroke="var(--c-gold)"
+              stroke-width="1"
+              stroke-dasharray="3 4" />
+            <!-- 원을 따라 흐르는 글자 -->
+            <text class="circle-text">
+              <textPath href="#circlePath" startOffset="0">
+                · PLAY · DAY · VOL.3 · PLAY · DAY · VOL.3 
+              </textPath>
+            </text>
+          </svg>
+        </div>
         <div class="deco deco--blob" aria-hidden="true"></div>
       </section>
 
