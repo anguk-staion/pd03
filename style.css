@@ -56,12 +56,14 @@ body {
 }
 
 /* -------------------- ZOOM CONTROL -------------------- */
+/* 사용자에게는 보이지 않도록 숨김 처리.
+   추후 미리보기 확인이 필요할 때 아래 `display: none;` 라인만 삭제(또는 주석처리)하세요. */
 .zoom-control {
+  display: none;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1000;
-  display: flex;
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
@@ -266,6 +268,7 @@ body {
 /* -------------------- CTA BUTTONS -------------------- */
 .cta-group {
   display: flex;
+  justify-content: center;
   gap: 14px;
   margin-top: 36px;
   flex-wrap: wrap;
@@ -376,7 +379,8 @@ body {
   border: 1px dashed var(--c-gold);
   border-radius: 50%;
   opacity: 0.5;
-  animation: spin 40s linear infinite;
+  /* 360도 회전 대신, 작은 각도로 좌우로 살랑살랑 흔들리는 모션 */
+  animation: sway 6s ease-in-out infinite;
 }
 .deco--circle::before {
   content: "play • day • vol.3 • play • day • vol.3 • ";
@@ -535,8 +539,9 @@ body {
   0%   { left: -100%; }
   100% { left: 130%; }
 }
-@keyframes spin {
-  to { transform: rotate(360deg); }
+@keyframes sway {
+  0%, 100% { transform: rotate(-12deg); }
+  50%      { transform: rotate(12deg); }
 }
 @keyframes pulse {
   0%   { transform: scale(1);    opacity: 0.7; }
