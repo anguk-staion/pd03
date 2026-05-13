@@ -102,6 +102,16 @@
 
   updateVideoUI();
 
+  // 영상 로드 실패 시 (파일이 아직 없을 때) placeholder 다시 표시
+  if (video) {
+    video.addEventListener('error', () => {
+      if (placeholder) {
+        placeholder.style.display = 'flex';
+        video.style.display = 'none';
+      }
+    }, true);
+  }
+
   // 추후 동적으로 src를 바꿔도 자동 반영될 수 있도록 MutationObserver 사용
   if (video) {
     const mo = new MutationObserver(updateVideoUI);
