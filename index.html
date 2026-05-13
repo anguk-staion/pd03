@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlayDay vol.3 — 고마운 사람에게 보내는 영상편지</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============================================
+       ZOOM CONTROL (개발용 — 비율 조정 패널)
+       기본 폭 900px, 숫자 입력 시 비율 조정
+       ============================================ -->
+  <div class="zoom-control" id="zoomControl">
+    <label for="zoomInput">Zoom</label>
+    <input type="number" id="zoomInput" value="100" min="10" max="300" step="5" />
+    <span>%</span>
+    <button id="zoomReset" type="button">Reset</button>
+  </div>
+
+  <!-- ============================================
+       POST CONTAINER (게시물 본체 — 기본 900px)
+       ============================================ -->
+  <div class="post-wrapper">
+    <article class="post" id="post">
+
+      <!-- ─────────── HEADER ─────────── -->
+      <header class="post-header">
+        <div class="post-header__tag">
+          <span class="dot"></span>
+          <span>PlayDay</span>
+          <span class="divider"></span>
+          <span class="vol">vol. 3</span>
+        </div>
+        <h1 class="post-header__title">
+          <span class="title-line title-line--accent">고마운 사람에게 보내는</span>
+          <span class="title-line">영상편지, <em>전해보세요</em></span>
+        </h1>
+        <p class="post-header__sub">
+          AI가 만들어주는 짧은 영상 한 편으로,<br />
+          미처 전하지 못했던 마음을 건네는 시간.
+        </p>
+      </header>
+
+      <!-- ─────────── SECTION 1+2: 취지 & CTA ─────────── -->
+      <section class="intro-section">
+        <div class="intro-section__inner">
+          <div class="intro-copy">
+            <span class="eyebrow">About this PlayDay</span>
+            <h2 class="intro-copy__heading">
+              마음은 있는데,<br />
+              말로는 잘 안 나올 때가 있죠.
+            </h2>
+            <div class="intro-copy__body">
+              <p>
+                매일 곁에 있는 동료, 묵묵히 응원해준 선후배,
+                늘 든든한 가족, 그리고 오랜 친구까지.
+                평소엔 쑥스러워 꺼내지 못했던 “고마워요” 한마디를
+                <strong>AI 영상편지</strong>로 전해보는 건 어떨까요?
+              </p>
+              <p>
+                직접 카메라 앞에 서지 않아도 괜찮습니다.
+                간단한 문장 몇 줄이면 AI가 따뜻한 영상 한 편을 완성해 드립니다.
+                이번 PlayDay에서는 직원 여러분의 진심을 담은 영상편지를 모아
+                서로의 마음을 나누는 자리를 마련했어요. 부담 없이, 가볍게 참여해 주세요.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA 버튼 (하이퍼링크는 추후 연결) -->
+          <div class="cta-group">
+            <a href="#" class="btn btn--primary" data-cta="participate">
+              <span class="btn__label">참여하러 가기</span>
+              <span class="btn__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+              <span class="btn__shine" aria-hidden="true"></span>
+            </a>
+
+            <a href="#" class="btn btn--secondary" data-cta="gallery">
+              <span class="btn__label">동료 작품 보러 가기</span>
+              <span class="btn__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <p class="cta-note">* 버튼 링크는 추후 연결 예정입니다.</p>
+        </div>
+
+        <!-- 데코레이션 -->
+        <div class="deco deco--circle" aria-hidden="true"></div>
+        <div class="deco deco--blob" aria-hidden="true"></div>
+      </section>
+
+      <!-- ─────────── SECTION 3: 샘플 영상 ─────────── -->
+      <section class="sample-section">
+        <div class="sample-section__head">
+          <span class="eyebrow">Sample</span>
+          <h2 class="sample-section__title">이런 느낌의 영상편지가 완성돼요</h2>
+          <p class="sample-section__desc">
+            먼저 샘플 영상을 한 번 감상해 보세요. 영상이 자동으로 재생됩니다.
+          </p>
+        </div>
+
+        <!-- 영상 플레이어 영역 (영상 링크는 추후 추가) -->
+        <div class="video-frame">
+          <div class="video-frame__corners">
+            <span class="corner corner--tl"></span>
+            <span class="corner corner--tr"></span>
+            <span class="corner corner--bl"></span>
+            <span class="corner corner--br"></span>
+          </div>
+
+          <!--
+            ↓↓↓ 추후 영상 링크가 정해지면 아래 <video> 태그의 src에 직접 넣어주세요.
+            예) <source src="sample.mp4" type="video/mp4" />
+            (유튜브 등 외부 임베드를 사용할 경우, video 태그 대신 iframe으로 교체해도 됩니다.)
+          -->
+          <video
+            id="sampleVideo"
+            class="video-frame__player"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster=""
+          >
+            <source src="" type="video/mp4" />
+            브라우저가 video 태그를 지원하지 않습니다.
+          </video>
+
+          <!-- 영상 링크가 없을 때 보이는 자리표시(placeholder) -->
+          <div class="video-frame__placeholder" id="videoPlaceholder">
+            <div class="placeholder-icon">
+              <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <p class="placeholder-text">샘플 영상이 이곳에 재생됩니다</p>
+            <p class="placeholder-sub">영상 링크가 추가되면 자동으로 재생돼요.</p>
+          </div>
+        </div>
+
+        <p class="sample-caption">
+          ※ 위 영상은 예시이며, 실제 작품은 각자의 마음을 담아 자유롭게 만들어주세요.
+        </p>
+      </section>
+
+      <!-- ─────────── FOOTER ─────────── -->
+      <footer class="post-footer">
+        <span>PlayDay vol.3 · 영상편지 캠페인</span>
+      </footer>
+
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
